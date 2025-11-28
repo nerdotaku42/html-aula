@@ -1,0 +1,225 @@
+:root {
+    --color-primary: #008060; /* Verde escuro principal */
+    --color-secondary: #2ECC71; /* Verde/Ciano usado para destaque */
+    --color-white: #ffffff;
+    --color-gray-dark: #34495E;
+    --color-red-cross: #D32F2F; /* Cor da cruz do símbolo */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    background-color: #f4f4f4;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* --- Header e Barra de Navegação --- */
+
+.header {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding: 10px 0;
+}
+
+.header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 0;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+    font-weight: 700;
+    /* Estilização básica do ícone de cruz vermelha */
+    background-color: var(--color-red-cross);
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+.plus-icon {
+    font-size: 20px;
+    color: var(--color-white);
+    line-height: 1;
+}
+
+.search-bar {
+    display: flex;
+    flex-grow: 1;
+    margin: 0 20px;
+    max-width: 600px;
+    background-color: var(--color-white);
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.search-bar input {
+    border: none;
+    padding: 10px 15px;
+    flex-grow: 1;
+    font-size: 16px;
+    outline: none;
+    color: var(--color-gray-dark);
+}
+
+.search-btn {
+    background-color: var(--color-secondary);
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    color: var(--color-white);
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.auth-links a {
+    text-decoration: none;
+    color: var(--color-white);
+    padding: 8px 15px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+.btn-link {
+    margin-right: 10px;
+}
+
+.btn-cadastro {
+    background-color: var(--color-secondary);
+    font-weight: 500;
+}
+
+.main-nav {
+    background-color: var(--color-secondary);
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--color-white);
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: 500;
+    transition: background-color 0.3s;
+}
+
+.main-nav a:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* --- Seção de Destaque (Highlight) --- */
+
+.highlight-section {
+    position: relative;
+    background-color: #004d39; /* Versão mais escura do verde principal para o fundo */
+    padding: 80px 0;
+    color: var(--color-white);
+    text-align: center;
+    /* O background 'main.jpg' pode ser adicionado aqui com 'background-image' */
+    background-size: cover;
+    background-position: center;
+}
+
+.highlight-box {
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo semi-transparente para o texto */
+    padding: 40px;
+    border-radius: 8px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.highlight-box h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.highlight-box h1 strong {
+    font-weight: 700;
+}
+
+.highlight-box p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+/* --- Cards de Medicamentos --- */
+
+.featured-meds {
+    display: flex;
+    justify-content: space-around;
+    padding: 40px 0;
+    gap: 20px;
+}
+
+.med-card {
+    background-color: var(--color-secondary);
+    border-radius: 8px;
+    padding: 20px;
+    width: 30%;
+    color: var(--color-white);
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-icon {
+    /* Estilização para o ícone de remédio */
+    margin-bottom: 15px;
+    font-size: 40px;
+}
+
+.med-name {
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.rating {
+    font-size: 0.9em;
+    margin-bottom: 10px;
+}
+
+.lab {
+    font-size: 0.8em;
+    opacity: 0.8;
+}
+
+/* Opcional: Adicionar media queries para responsividade */
+@media (max-width: 768px) {
+    .header .container {
+        flex-direction: column;
+    }
+
+    .search-bar {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .featured-meds {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .med-card {
+        width: 90%;
+        margin-bottom: 20px;
+    }
+}
